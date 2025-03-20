@@ -39,15 +39,14 @@ echo ***********************************
 echo.
 
 :: Attempt to run as administrator
-runas /savecred /user:emiyazaki\prtadmin "cmd /k exit" >nul 2>&1
+:: runas /savecred /user:emiyazaki\prtadmin "cmd /k exit" >nul 2>&1
 
 :: Check if runas was successful
-if errorlevel 1 (
-    echo Invalid password or failed to obtain administrator privileges.
-    pause
-    exit /b
-)
-
+:: if errorlevel 1 (
+::    echo Invalid password or failed to obtain administrator privileges.
+::    pause
+::    exit /b
+:: )
 
 :: Continue to menu if admin access is granted
 :menu
